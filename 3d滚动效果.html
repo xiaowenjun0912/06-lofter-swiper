@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <script src="./js/jquery-3.1.1.min.js"></script>
+    <link rel="stylesheet" href="./lib/swiper/swiper.min.css">
+    <script src="./lib/swiper/js/swiper.min.js"></script>
+
+
+    <style>
+        .swiper-container {
+            width: 100%;
+        }
+
+        .swiper-slide {
+            width: 80%;
+        }
+
+        img {
+            width: 100%;
+        }
+
+    </style>
+</head>
+<body>
+    <!-- 1. 实现html的主体结构 -->
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+                <div class="swiper-slide"><img src="./img/02-head-icons/01.jpg" alt=""></div>
+                <div class="swiper-slide"><img src="./img/02-head-icons/02.jpg" alt=""></div>
+                <div class="swiper-slide"><img src="./img/02-head-icons/03.jpg" alt=""></div>
+                <div class="swiper-slide"><img src="./img/02-head-icons/04.jpg" alt=""></div>
+                <div class="swiper-slide"><img src="./img/02-head-icons/05.jpg" alt=""></div>
+                <div class="swiper-slide"><img src="./img/02-head-icons/06.jpg" alt=""></div>
+        </div>
+        <script>
+            var swiper = new Swiper('.swiper-container', {
+                effect: 'coverflow',
+                grabCursor: true,
+                centeredSlides: true,
+                slidesPerView: 'auto',
+
+                //3d滚动的参数： 
+                coverflowEffect: {
+                    rotate: 20, //绕y轴旋转的角度
+                    stretch: -20, //元素和元素之间的间隔
+                    depth: 20, //调整非当前元素的大小
+                    modifier: 1,
+                    slideShadows: true,
+                },
+
+                pagination: {
+                    el: '.swiper-pagination',
+                },
+            });
+        </script>
+            
+    
+</body>
+</html>
+
